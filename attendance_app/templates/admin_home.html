@@ -1,0 +1,18 @@
+
+{% extends "base.html" %}
+{% block content %}
+<div class=" text-center">
+    <h1 class="text-primary mb-4">Admin Control Panel</h1>
+
+    <div class="card shadow p-4">
+        <h2 class="text-success mb-3">Welcome Back, Admin!</h2>
+        <p class="lead">You're logged in to the student management system.</p>
+        <p class="text-muted">
+            From here, you can monitor student activity, manage attendance records, and oversee the entire platform.
+        </p>
+        <a href="{{ url_for('admin.dashboard') }}" class="btn btn-outline-primary mt-4 btn-lg">
+            Go to Dashboard
+        </a>
+    </div>
+</div>
+{% endblock %}

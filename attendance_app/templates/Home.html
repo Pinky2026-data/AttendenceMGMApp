@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+<div class="container text-center mt-5">
+    <h1 class="mb-4">Welcome to the Student Attendance App</h1>
+    <p class="lead">Easily manage and track student attendance with efficiency and transparency.</p>
+
+    <div class="mt-4">
+        <a href="{{ url_for('auth.login') }}" class="btn btn-primary btn-lg me-3">Login</a>
+        <a href="{{ url_for('auth.register') }}" class="btn btn-outline-secondary btn-lg">Register</a>
+    </div>
+
+    <div class="mt-5">
+        <img src="{{ url_for('static', filename='attendance.png') }}" alt="Attendance Illustration" style="max-width: 100%; height: auto;">
+    </div>
+</div>
+{% endblock %}

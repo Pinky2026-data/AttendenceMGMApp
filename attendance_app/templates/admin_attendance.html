@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="mb-4 text-center text-primary">
+        <i class="bi bi-journal-check me-2"></i>Attendance Records
+    </h2>
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover align-middle shadow">
+            <thead class="table-info text-center">
+                <tr>
+                    <th scope="col">
+                        <i class="bi bi-person-circle me-1 text-dark"></i>Student
+                    </th>
+                    <th scope="col">
+                        <i class="bi bi-calendar2-week-fill me-1 text-dark"></i>Date
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                {% for rec in records %}
+                <tr class="table-light">
+                    <td> {{ rec.student.username }}</td>
+                    <td>   {{ rec.date }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
